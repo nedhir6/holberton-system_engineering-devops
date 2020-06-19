@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # This script is displaying information about the holbertonschool file
-if test -f "holbertonschool"; then
+if test -e "holbertonschool"; then
 	echo "holbertonschool file exists"
 	if [ -s "holbertonschool" ]
 	then
