@@ -2,7 +2,8 @@
 #displays To infinity and beyond indefinitely
 echo "$BASHPID" >> /var/run/holbertonscript.pid
 trap "echo 'I hate the kill command'" SIGTERM
-trap "rm /var/run/holbertonscript.pid | exit" SIGQUIT & SIGTERM
+trap "rm /var/run/holbertonscript.pid ; exit" SIGQUIT
+trap "rm /var/run/holbertonscript.pid ; exit" SIGTERM
 trap "echo 'Y U no love me?!'" SIGINT
 while 'true'
 do
