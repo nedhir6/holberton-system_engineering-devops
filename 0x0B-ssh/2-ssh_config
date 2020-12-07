@@ -1,5 +1,7 @@
 Host *
       HostName 34.75.107.13
-      User ubuntu
+      User nedhir
       IdentityFile ~/.ssh/holberton
       ForwardAgent yes
+      passwordAuthentication no
+
