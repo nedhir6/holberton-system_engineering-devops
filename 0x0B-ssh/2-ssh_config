@@ -3,5 +3,3 @@ Host *
       User nedhir
       IdentityFile ~/.ssh/holberton
       ForwardAgent yes
-      passwordAuthentication no
-
