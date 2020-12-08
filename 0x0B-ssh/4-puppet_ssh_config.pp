@@ -1,5 +1,5 @@
 #  to set up client SSH configuration file
-exec { 'echo -e "\tPasswordAuthentication no \n \tIdentityFile ~/.ssh/holberton" >> /etc/ssh/config':
+exec { 'PasswordAuthentication no':
     command     => 'echo -e "\tPasswordAuthentication no \n \tIdentityFile ~/.ssh/holberton" >> /etc/ssh/ssh_config',
     provider    => 'shell',
   }
