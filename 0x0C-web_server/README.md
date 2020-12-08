@@ -1,18 +1,18 @@
-## Learning Objectives
+# Learning Objectives
 
-# General
+## General
 
     What is the main role of a web server
     What is a child process
     Why web servers usually have a parent process and child processes
     What are the main HTTP requests
 
-# DNS
+## DNS
 
     What DNS stands for
     What is DNS main role
 
-# DNS Record Types
+## DNS Record Types
 
     A
     CNAME
