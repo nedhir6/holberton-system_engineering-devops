@@ -1,5 +1,5 @@
-Host *
-      HostName 34.75.107.13
-      User nedhir
+Host  34.75.107.13
+      HostName 34.75.107.13 
+      User ned6
       IdentityFile ~/.ssh/holberton
       ForwardAgent yes
