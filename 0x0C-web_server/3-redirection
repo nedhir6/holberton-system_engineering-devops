@@ -5,7 +5,7 @@ sudo apt-get -y update
 sudo apt-get -y install nginx
 sudo ufw allow 'Nginx HTTP'
 sudo chmod a+w /etc/nginx/sites-available/default
-sudo printf %s "server {
+printf %s "server {
 	listen 80 default_server;
 	root   /usr/share/nginx/html;
 	index  index.html index.htm;
