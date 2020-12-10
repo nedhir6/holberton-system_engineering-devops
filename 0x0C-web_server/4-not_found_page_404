@@ -17,7 +17,6 @@ printf %s "server {
         return 301 https://lichess.org;}
 }" > /etc/nginx/sites-available/default
 sudo touch /usr/share/nginx/html/custom_404.html
-sudo touch /var/www/html/404.html
 sudo chmod a+w /usr/share/nginx/html/custom_404.html
 echo "Ceci n'est pas une page" > /usr/share/nginx/html/custom_404.html
 sudo service nginx restart
