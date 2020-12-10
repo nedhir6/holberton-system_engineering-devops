@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Configure Nginx server so that /redirect_me is redirecting to another page
+# Install nginx on web-01 server
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo ufw allow 'Nginx HTTP'
+sudo chmod a+w /etc/nginx/sites-available/default
+printf %s "server {
+        listen 80 default_server;
+        error_page 404 /custom_400.html;
+        loaction = /custom_404.html {
+                root /usr/share/nginx/html;
+                internal;}
+        root   /usr/share/nginx/html;
+        index  index.html index.html;
+        location /redirect_me {
+        return 301 https://lichess.org;}
+}" > /etc/nginx/sites-available/default
+sudo touch /usr/share/nginx/html/custom_404.html
+sudo chmod a+w /usr/share/nginx/html/custom_404.html
+echo "Ceci n'est pas une page" > /usr/share/nginx/html/custom_404.html
+sudo service nginx restart
