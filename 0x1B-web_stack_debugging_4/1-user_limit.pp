@@ -1,7 +1,7 @@
 # User limit
 exec { 'file change':
 provider => shell,
-command  => 'sudo echo "fs.file-max = 65536" >> /etc/sysctl.conf',
+command  => 'sudo sed -i "fs.file-max = 65536" /etc/sysctl.conf',
 }
 exec { 'apply the limit':
 provider => shell,
