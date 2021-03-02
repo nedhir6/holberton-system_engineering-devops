@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Gather data from an API """
-from sys import argv
 import requests
+from sys import argv
 
 if __name__ == "__main__":
     url1 = "https://jsonplaceholder.typicode.com/todos"
@@ -15,7 +15,7 @@ if __name__ == "__main__":
     user = req2.json()
     for task in todolist:
         if task.get("completed"):
-            donetasks += 2
+            donetasks += 1
     for scope in user:
         name = scope.get("name")
     print("Employee {} is done with tasks({}/{}):".format(
