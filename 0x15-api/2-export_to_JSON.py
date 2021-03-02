@@ -18,7 +18,7 @@ if __name__ == "__main__":
         name = scope.get("username")
         id = scope.get("id")
     file = argv[1] + ".json"
-    content = {id:[]}
+    content = {id: []}
     with open(file, mode='w') as file1:
         for tasks in todolist:
             dict = {}
