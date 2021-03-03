@@ -11,12 +11,12 @@ if __name__ == "__main__":
     req2 = requests.get(url2)
     todolist = req1.json()
     user = req2.json()
+    dict = {}
     file = "todo_all_employees.json"
     with open(file, mode='w') as file1:
         for scope in user:
             name = scope.get("username")
             id = scope.get("id")
-            dict = {}
             dict[id] = []
             for tasks in todolist:
                 if id == tasks["userId"]:
