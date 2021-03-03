@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 '''titles of the first 10 hot posts listed for a subreddit'''
 import requests
+
+
 def top_ten(subreddit):
     headers = {'User-Agent': 'ned6'}
     res = requests.get(
