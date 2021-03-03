@@ -2,14 +2,15 @@
 '''recurse'''
 import requests
 
+
 def recurse(subreddit, hot_list=[], after=''):
     headers = {'User-Agent': 'ned6'}
     res = requests.get(
-        'https://www.reddit.com/r/{}/hot.json?after={}'.format(subreddit, after),
-        headers=headers)
+        'https://www.reddit.com/r/{}/hot.json?after={}'.
+        format(subreddit, after), headers=headers)
     if res.status_code != 200:
         return None
-    info =res.json()
+    info = res.json()
     data1 = info.get('data')
     chi = data1.get('children')
     for i in chi:
