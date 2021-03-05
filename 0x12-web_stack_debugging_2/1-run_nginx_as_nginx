@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # nginx as nginx
-sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-sudo pkill -o nginx
+sudo rm /etc/nginx/sites-enabled/*
+sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 sudo -u nginx service nginx restart
